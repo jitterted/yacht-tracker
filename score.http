@@ -1,0 +1,30 @@
+POST https://blackjack-game-monitor.herokuapp.com/api/gameresults
+Content-Type: application/json
+
+{
+  "score": "30",
+  "category": "Little Straight",
+  "roll": "1 2 3 4 5"
+}
+
+###
+
+POST http://localhost:8080/api/scores
+#POST https://blackjack-game-monitor.herokuapp.com/api/gameresults
+Content-Type: application/json
+
+{
+  "score": "30",
+  "category": "Little Straight",
+  "roll": "1 2 3 4 5"
+}
+
+###
+
+DELETE https://blackjack-game-monitor.herokuapp.com/api/gameresults
+
+###
+
+DELETE http://localhost:8080/api/scores
+
+###

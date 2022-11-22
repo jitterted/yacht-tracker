@@ -133,19 +133,18 @@
 
 <section class="cards">
 
-    <article class="card" th:each="result: ${results}">
+    <article class="card" th:each="score: ${scores}">
         <div class="card-content">
             <p class="category">
-                <span th:text="${result.playerName}">Ted</span>
+                Scored <span th:text="${score.score}">30</span>
             </p>
-            <h2><span th:text="${result.outcome}">You Lost, you busted</span></h2>
-            <h3>Dealer: <span th:text="${result.dealerHandValue}">21</span></h3>
-            <h3>Player: <span th:text="${result.playerHandValue}">21</span></h3>
+            <h2><span th:text="${score.category}">Little Straight</span></h2>
+            <h2>Roll: <span th:text="${score.roll}">6 6 6 6 6</span></h2>
         </div>
         <footer>
             <div class="post-meta">
                 <span class="timestamp"><i class="fa fa-clock-o"></i><span
-                        th:text="${result.receivedOn}">time</span></span>
+                        th:text="${score.receivedOn}">time</span></span>
             </div>
         </footer>
     </article>

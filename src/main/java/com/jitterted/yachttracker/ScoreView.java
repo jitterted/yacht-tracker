@@ -15,6 +15,9 @@ public class ScoreView {
     private String receivedOn;
 
     public ScoreView(ScoredEvent scoredEvent) {
+        score = scoredEvent.getScore();
+        category = scoredEvent.getCategory();
+        roll = scoredEvent.getRoll();
         receivedOn = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss"));
     }
 
