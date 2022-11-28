@@ -14,14 +14,29 @@ POST http://localhost:8080/api/scores
 Content-Type: application/json
 
 {
-  "score": "30",
-  "category": "Little Straight",
-  "roll": "1 2 3 4 5"
+  "score": "3",
+  "category": "ONES",
+  "roll": "1 1 3 1 5"
 }
 
 ###
 
-DELETE https://blackjack-game-monitor.herokuapp.com/api/gameresults
+POST http://localhost:8080/api/scores
+Content-Type: application/json
+
+{
+  "score": "5",
+  "category": "ONES",
+  "roll": "1 1 1 1 1"
+}
+
+###
+
+GET http://localhost:8080/api/averages?scoreCategory=ONES
+
+###
+
+DELETE https://yacht-tracker-production.up.railway.app/api/gameresults
 
 ###
 

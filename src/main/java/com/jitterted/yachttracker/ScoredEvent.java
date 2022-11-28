@@ -2,19 +2,20 @@ package com.jitterted.yachttracker;
 
 /**
  * This is the inbound event sent to the API controller
+ * It is our "domain" "Value Objects"
  */
 public class ScoredEvent {
-    private final String score;
+    private final int score;
     private final String category;
     private final String roll;
 
-    public ScoredEvent(String score, String category, String roll) {
+    public ScoredEvent(int score, String category, String roll) {
         this.score = score;
         this.category = category;
         this.roll = roll;
     }
 
-    public String getScore() {
+    public int getScore() {
         return score;
     }
 

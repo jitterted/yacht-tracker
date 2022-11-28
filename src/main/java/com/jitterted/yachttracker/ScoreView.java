@@ -7,26 +7,16 @@ import java.time.format.DateTimeFormatter;
  * This is the view model for display in the HTML template
  */
 public class ScoreView {
-    private Long id;
-
     private String score;
     private String category;
     private String roll;
     private String receivedOn;
 
     public ScoreView(ScoredEvent scoredEvent) {
-        score = scoredEvent.getScore();
+        score = String.valueOf(scoredEvent.getScore());
         category = scoredEvent.getCategory();
         roll = scoredEvent.getRoll();
         receivedOn = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss"));
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getScore() {
