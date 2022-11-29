@@ -31,7 +31,8 @@ public class ApiController {
                                              .stream()
                                              .filter(scoredEvent -> scoredEvent.getCategory().equals(scoreCategory))
                                              .mapToInt(ScoredEvent::getScore)
-                                             .average().getAsDouble();
+                                             .average()
+                                             .orElse(0.0);
         return ResponseEntity.ok(new CategoryAverage(scoreCategory, average));
     }
 
